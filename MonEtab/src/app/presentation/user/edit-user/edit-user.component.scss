@@ -1,0 +1,88 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-student {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: #007BFF;
+    }
+  
+    i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+  
+    span {
+      font-size: 18px;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  form {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+  
+      label {
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #555;
+      }
+  
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+  
+        &:focus {
+          border-color: #007BFF;
+          outline: none;
+        }
+      }
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px 0;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  

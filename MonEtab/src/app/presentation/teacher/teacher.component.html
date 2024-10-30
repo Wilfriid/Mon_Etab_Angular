@@ -1,0 +1,44 @@
+<app-sidebar></app-sidebar>
+
+<div class="student-content">
+  <h1>Gestion des Professeurs</h1>
+  
+  <!-- <button (click)="addTeacher()">Ajouter un Prof</button> -->
+  <a href="/add-teacher">Ajouter un prof </a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenoms</th>
+        <th>Matiere</th>
+        <th>Vacant</th>
+        <th>Âge</th>
+        <th>Téléphone</th>
+        <th>Ville</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Jmaes</td>
+        <td>Zaddy</td>
+        <td>français</td>
+        <td>oui</td>
+        <td>30</td>
+        <td>0779185258</td>
+        <td>Abidjan</td>
+        <td>
+          <!-- <button (click)="editTeacher({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Modifier</button> --> 
+          <a href="/edit-teacher" class="btn-return">Modifier</a>
+          <button (click)="deleteTeacher({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Supprimer</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+

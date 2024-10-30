@@ -1,0 +1,131 @@
+<div class="d-flex">
+  <!-- Sidebar placé sur la gauche -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Conteneur principal pour centrer et réduire la taille du formulaire -->
+  <div class="container mt-4" style="max-width: 600px;">
+    <a href="/student" class="back">
+      <i class="material-icons" style="color: black;">arrow_back</i>
+      <span>Retour</span>
+    </a>
+    <form [formGroup]="formStudent">
+      <div class="mb-3">
+        <label for="birthday" class="form-label">Date de naissance</label>
+        <input
+          type="date"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['birthday'])"
+          formControlName="birthday"
+          class="form-control"
+          id="birthday"
+        />
+        <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['birthday'])">
+          <ng-container *ngIf="formStudent.controls['birthday'].hasError('required')">
+            Ce champ est requis
+          </ng-container>
+        </span>
+      </div>
+
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Prénom</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['firstName'])"
+          formControlName="firstName"
+          class="form-control"
+          id="firstName"
+          placeholder=""
+        />
+        <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['firstName'])">
+          <ng-container *ngIf="formStudent.controls['firstName'].hasError('required')">
+            Ce champ est requis
+          </ng-container>
+          <ng-container *ngIf="formStudent.controls['firstName'].hasError('minlength')">
+            Minimum 10 caractères
+          </ng-container>
+        </span>
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Nom de famille</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['lastName'])"
+          formControlName="lastName"
+          class="form-control"
+          id="lastName"
+          placeholder=""
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Numéro de téléphone</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['phoneNumber'])"
+          formControlName="phoneNumber"
+          class="form-control"
+          id="phoneNumber"
+          placeholder=""
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="urlPicture" class="form-label">URL de la photo</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['urlPicture'])"
+          formControlName="urlPicture"
+          class="form-control"
+          id="urlPicture"
+          placeholder=""
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="gender" class="form-label">Genre</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['gender'])"
+          formControlName="gender"
+          class="form-control"
+          id="gender"
+          placeholder=""
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="matricule" class="form-label">Matricule</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['matricule'])"
+          formControlName="matricule"
+          class="form-control"
+          id="matricule"
+          placeholder=""
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="phoneNumberFather" class="form-label">Numéro de téléphone du père</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formStudent.controls['phoneNumberFather'])"
+          formControlName="phoneNumberFather"
+          class="form-control"
+          id="phoneNumberFather"
+          placeholder=""
+        />
+      </div>
+
+      <div class="d-grid gap-2 col-8 mx-auto">
+        <button class="btn btn-primary" type="submit">Enregistrer</button>
+      </div>
+    </form>
+    
+  </div>
+  
+</div>
+
+
+
+

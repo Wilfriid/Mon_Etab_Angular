@@ -1,0 +1,36 @@
+<app-sidebar></app-sidebar>
+
+<div class="student-content">
+  <h1>Gestion des Utilisateurs</h1>
+
+  <a href="/add-user">ajouter un Utilisateur</a>
+  
+  <!-- <button (click)="addUser()">Ajouter un Utilisateur</button> -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Pseudo</th>
+        <th>Date de creation</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>jsp</td>
+        <td>24/10/2024</td>
+        <td>
+          <!-- <button (click)="editUser({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Modifier</button> -->
+          <!-- <a href="/add-user">Ajouter un Utilisateur</a> -->
+          <a href="/edit-user" class="btn-return">Modifier</a>
+          <button (click)="deleteUser({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Supprimer</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+

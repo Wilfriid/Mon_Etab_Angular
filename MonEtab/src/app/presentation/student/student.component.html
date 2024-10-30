@@ -1,0 +1,48 @@
+<app-sidebar></app-sidebar>
+
+<div class="student-content">
+  <h1>Gestion des Élèves</h1>
+  
+  <!-- <button (click)="addStudent()">Ajouter un Élève</button> -->
+  <!-- <a routerLink="/add-student">Ajouter add-student</a> -->
+  <a href="/add-student">Ajouter un Élève</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenoms</th>
+        <th>Genre</th>
+        <th>Classe</th>
+        <th>Matricule</th>
+        <th>Âge</th>
+        <th>Téléphone</th>
+        <th>Ville</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>zek</td>
+        <td>Dev</td>
+        <td>M</td>
+        <td>tle</td>
+        <td>10002</td>
+        <td>20</td>
+        <td>0779185258</td>
+        <td>Abidjan</td>
+        <td>
+          <!-- <button (click)="editStudent({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Modifier</button> -->
+          <!-- <a href="/add-student">Ajouter un Élève</a> -->
+          <a href="/edit-student" class="btn-return">Modifier</a>
+          <button (click)="deleteStudent({ id: 1, name: 'Alice', age: 20, gender: 'Femme' })">Supprimer</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+

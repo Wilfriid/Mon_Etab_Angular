@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="col-md-6 col-lg-4">
+    <!-- Titre -->
+    <h2 class="text-center mb-4">Mon Etab</h2>
+
+    <!-- Formulaire d'édition de l'étudiant -->
+    <form [formGroup]="formLogin" (ngSubmit)="saveData()">
+      <!-- Champ Identifiant -->
+      <div class="mb-3">
+        <label for="identifiant" class="form-label">Identifiant</label>
+        <input
+          type="text"
+          [class.is-invalid]="isInvalidInput(formLogin.controls['identifiant'])"
+          formControlName="identifiant"
+          class="form-control"
+          id="identifiant"
+        />
+        <span class="text-danger" *ngIf="isInvalidInput(formLogin.controls['identifiant'])">
+          <ng-container *ngIf="formLogin.controls['identifiant'].hasError('required')">
+            Ce champ est requis
+          </ng-container>
+        </span>
+      </div>
+
+      <!-- Champ Mot de passe -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input
+          type="password"
+          [class.is-invalid]="isInvalidInput(formLogin.controls['password'])"
+          formControlName="password"
+          class="form-control"
+          id="password"
+        />
+        <span class="text-danger" *ngIf="isInvalidInput(formLogin.controls['password'])">
+          <ng-container *ngIf="formLogin.controls['password'].hasError('required')">
+            Ce champ est requis
+          </ng-container>
+          <ng-container *ngIf="formLogin.controls['password'].hasError('minlength')">
+            Minimum 10 caractères
+          </ng-container>
+        </span>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="submit">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>

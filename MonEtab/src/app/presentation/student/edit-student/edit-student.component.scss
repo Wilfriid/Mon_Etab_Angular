@@ -1,0 +1,69 @@
+.add-student {
+    flex: 0.3; // Réduit la taille de flex
+    margin-left: auto; // Aligne à droite
+    padding: 10px; // Réduit le padding interne
+    
+    border-radius: 6px; // Légère réduction du rayon de bordure
+    background-color: white; // Couleur de fond
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // Réduit l'ombre
+    width: 70%;
+   
+
+    h2 {
+      text-align: center;
+      color: #5a5a5a; // Remplacez par une couleur appropriée
+    }
+
+    .form-group {
+      margin-bottom: 10px; // Réduit l'espacement entre les groupes de formulaire
+
+      label {
+        display: block;
+        margin-bottom: 3px; // Réduit l'espacement sous le label
+        font-weight: bold;
+        color: #4a4a4a; // Remplacez par une couleur appropriée
+      }
+
+      input,
+      select {
+        width: 90%;
+        padding: 5px; // Réduit le padding interne des inputs
+        border: 1px solid #ccc; // Couleur de bordure
+        border-radius: 4px;
+        font-size: 14px; // Réduit la taille de la police
+
+        &:focus {
+          border-color: #007bff; // Couleur de bordure au focus
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      width: 90%;
+      padding: 8px; // Réduit le padding du bouton
+      background-color: #007bff; // Couleur de fond du bouton
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px; // Réduit la taille de la police du bouton
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3; // Couleur de fond au hover
+      }
+    }
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  
